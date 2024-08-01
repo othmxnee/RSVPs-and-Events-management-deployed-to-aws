@@ -1,4 +1,4 @@
-# django-web-app-deployed-to-AWS-Cloud
+![architecture](https://github.com/user-attachments/assets/9a5a7343-6f82-495b-9602-a4626804b77d)# django-web-app-deployed-to-AWS-Cloud
 
 # Events and RSVP Management Backend Web App
 
@@ -14,17 +14,6 @@ This is a backend web application for managing events and RSVPs, built with Djan
 - Deployment with Zappa
 - Logging
 
-
-
-
-![Uploading Screenshot from 2024-07-31 21-26-15.png…]()
-
-
-
-
-
-
-
 ## Technologies Used
 
 - Django
@@ -36,6 +25,19 @@ This is a backend web application for managing events and RSVPs, built with Djan
 - AWS SES
 - AWS CloudFront
 - PostgreSQL
+
+
+
+
+
+
+![architecture](https://github.com/user-attachments/assets/cf0e2cf9-a806-4afc-83de-a141d38e744c)
+
+
+
+
+
+
 
 ## Setup and Installation
 
@@ -88,19 +90,82 @@ This is a backend web application for managing events and RSVPs, built with Djan
 
 5. **Update `settings.py`**
 
+## Deployment with Zappa
 
+### Prerequisites for Deployment
 
+- Ensure your AWS CLI is configured with the necessary access and secret keys.
 
+### Steps for Deployment
 
+1. **Install Zappa:**
 
+    ```sh
+    pip install zappa
+    ```
 
+2. **Initialize Zappa:**
 
+    From the root directory of your project, run:
 
+    ```sh
+    zappa init
+    ```
 
+    Follow the prompts to configure your Zappa settings. This will create a `zappa_settings.json` file.
 
+3. **Configure Zappa Settings:**
 
+    Update the `zappa_settings.json` file as necessary. Ensure that your settings include the correct S3 bucket and IAM roles, if needed.
 
+4. **Deploy your application:**
 
+    ```sh
+    zappa deploy
+    ```
 
+    This command will package your application and deploy it to AWS Lambda.
 
+5. **Update your deployment:**
 
+    For subsequent updates to your application, use:
+
+    ```sh
+    zappa update
+    ```
+
+6. **Manage your deployment:**
+
+    - To rollback to a previous version:
+
+      ```sh
+      zappa rollback
+      ```
+
+    - To undeploy:
+
+      ```sh
+      zappa undeploy
+      ```
+
+7. **Additional Zappa commands:**
+
+    - To view your application's log output:
+
+      ```sh
+      zappa tail
+      ```
+
+    - To schedule tasks using AWS CloudWatch Events:
+
+      ```sh
+      zappa schedule
+      ```
+
+    - To unschedule events:
+
+      ```sh
+      zappa unschedule
+      ```
+
+With these steps, you can deploy your Django application to AWS Lambda using Zappa and manage it effectively. Ensure you have the necessary AWS permissions configured and test the application thoroughly after deployment.
