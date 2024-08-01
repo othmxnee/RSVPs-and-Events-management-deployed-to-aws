@@ -158,3 +158,6 @@ This is a backend web application for managing events and RSVPs, built with Djan
       ```
 
 With these steps, you can deploy your Django application to AWS Lambda using Zappa and manage it effectively. Ensure you have the necessary AWS permissions configured and test the application thoroughly after deployment.
+
+More description of the project in my linkdin account
+https://www.linkedin.com/in/bouhenni-othmane-27160b265/
