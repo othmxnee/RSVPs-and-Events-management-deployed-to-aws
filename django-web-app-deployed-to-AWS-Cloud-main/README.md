@@ -28,17 +28,6 @@ This is a backend web application for managing events and RSVPs, built with Djan
 
 
 
-
-
-
-![architecture](https://github.com/user-attachments/assets/cf0e2cf9-a806-4afc-83de-a141d38e744c)
-
-
-
-
-
-
-
 ## Setup and Installation
 
 ### Prerequisites
